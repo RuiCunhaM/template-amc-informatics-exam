@@ -1,0 +1,53 @@
+\documentclass{informatics}
+\input{config.tex}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Add your question banks %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \input{questions/bank1.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Set the number of exams %%
+%%%%%%% One per student %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{examcopy}[5]
+
+  \AMCformBegin
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%% Set the exam header %%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \header{<Discipline>}
+    {<Exam Type>}
+    {Engenharia Informática}
+    {<Date>}
+    {<Duration>}
+    {20 Valores}
+    {Preencha o nome e o número de aluno no topo desta folha. Adicionalmente,
+    \underline{pinte completamente} ($\blacksquare$) as caixas
+    correspondentes aos dígitos do número na grelha ao lado (\underline{dígito das
+    unidades na caixa mais à direita}). Proceda da mesma forma para assinalar
+  as respostas que considera correctas. 
+  \\ \textbf{Não use as áreas sombreadas!}}
+
+  \AMCform
+
+  % Reset counters for each exam copy
+  % DO NOT CHANGE 
+  \setcounter{groupCounter}{0}
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%% Begin exam  %%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  % Build your exam here
+  % \insertpool{example-pool}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%% End exam  %%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{examcopy}
+\end{document}

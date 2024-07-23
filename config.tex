@@ -1,0 +1,36 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Question scores %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\truefalseScore{v=0,b=1,m=-1}
+\def\singleScore{e=0,v=0,b=1,m=0}
+\def\multipleScore{e=0,v=0,b=.25,m=-.25,p=0,d=0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Score box %%%%%%%%%
+%%%%%% for open answer %%%%%% 
+%%%%%%%%% questions %%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\scorebox}{
+  \wrongchoice[0]{0}\scoring{0}
+  \wrongchoice[.1]{1}\scoring{0.1}
+  \wrongchoice[.2]{2}\scoring{0.2}
+  \wrongchoice[.3]{3}\scoring{0.3}
+  \wrongchoice[.4]{4}\scoring{0.4}
+  \wrongchoice[.5]{5}\scoring{0.5}
+  \wrongchoice[.6]{6}\scoring{0.6}
+  \wrongchoice[.7]{7}\scoring{0.7}
+  \wrongchoice[.8]{8}\scoring{0.8}
+  \wrongchoice[.9]{9}\scoring{0.9}
+  \correctchoice[1]{10}\scoring{1}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Mutiple question symbol %%
+%%%% Refer to AMC's docs %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \def\multiSymbole{$\clubsuit$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Margins %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{hmargin=1.5cm,headheight=1cm,headsep=.3cm,footskip=1cm,top=2.5cm,bottom=2cm}
