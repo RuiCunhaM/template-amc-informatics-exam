@@ -25,16 +25,18 @@ This repository contains an AMC exam template for the Informatics Department at 
 1. Go to AMC and click `New Project`
 1. In the `Source File` section select `Archive`
 1. Select the downloaded `.zip` file
-1. Build your questions/question pools (we recommend separated files)
+1. Build your questions/question pools (we recommend individual files)
 1. Build your exam in the [`main.tex`](main.tex) file
 
 ---
 
 ### Commands
 
+This section provides an overview on how to use the most relevant Latex commands to formulate questions and build exams.
+
 #### Building questions
 
-There are 5 main type of questions you can use. **truequestion**, **falsequestion**, **single**, **multiple** and **open**. To create and insert a question of one of these types you can utilize the commands in the example below. Make sure to provide the question with a unique identifier.
+There are 5 main type of questions you can use. `truequestion`, `falsequestion`, `single`, `multiple` and `open`. To create and insert a question of one of these types you can utilize the commands in the example below. Make sure to provide the question with a unique identifier.
 
 ```latex
 \truequestion{uid-1}{This is a true question}
@@ -133,7 +135,7 @@ When you create question pools, you later need to insert all or some of those qu
 
 ### Code blocks
 
-Following AMC instructions, to display large code blocks in your code you should use the environment `myverbbox` from the `verbatimbox` package.
+Following AMC instructions, to display large code blocks in your exam you should use the environment `myverbbox` from the `verbatimbox` package.
 
 ```latex
 % Define your code block anywhere before the examcopy, e.g.:
@@ -193,7 +195,7 @@ After this process, the `Flattened.pdf` can be loaded into AMC for the data capt
   % ...
   ```
 
-  This will insert one random question version from each pool as intended, however, in all the exams the `q1` question will appear first, followed by the `q2`. If you each to shuffle the questions order, so in some exams `q2` will appear first followed by `q1`, you can use the `combinepool` command to create a new pool and later insert the new one:
+  This will insert one random question version from each pool as intended, however, in all the exams the `q1` question will appear first, followed by the `q2`. If you wish to shuffle the questions order, so in some exams `q2` will appear first followed by `q1`, you can use the `combinepool` command to create a new pool and later insert the new one:
 
   ```latex
   \combinepool{combined-pool}
