@@ -175,7 +175,7 @@ The default scores are as followed:
 
 Open Answer questions are required to be manually graded after the exam and before the data capture process. To do this, the examiner needs to fill the score boxes reserved for that purpose. This step can be conducted directly in the physical paper sheets before being scanned, or instead, by annotating the PDF after the scanning process.
 
-**If you opt to grade the questions by annotating the PDF, you need to flatten the annotations before loading the PDF into AMC.** We recommend using [ImageMagick](https://imagemagick.org/index.php) for this purpose. Example:
+**If you opt to grade the questions by annotating the PDF, depending on the software you use, you may need to flatten the annotations before loading the PDF into AMC.** We recommend using [ImageMagick](https://imagemagick.org/index.php) for this purpose. Example:
 
 ```bash
 convert -density 150 Annotated.pdf Flattened.pdf
