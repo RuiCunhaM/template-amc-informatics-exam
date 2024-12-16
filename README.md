@@ -209,7 +209,6 @@ After this process, the `Flattened.pdf` can be loaded into AMC for the data capt
 
 ##### TODO:
 
-- [ ] Add Makefile for development compilation
 - [ ] Allow arbitrary number of choices for multiple choice questions
-- [ ] Allow to set language used (remove hardcoded Portuguese sentences).
+- [ ] Allow setting language used (remove hardcoded Portuguese sentences).
 - [ ] Reduce the amount of duplicated code in the pool environment definition. Due to AMC inner works, Latex command expansion does not work entirely as expected, which makes it hard to reuse some previous command definitions.
