@@ -110,18 +110,6 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Single answer question %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\single}[3]{
-  \begin{question}{#1}\scoring{\singleScore}
-    #2
-    \begin{choices}
-      #3
-    \end{choices}
-  \end{question}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% Question item %%%%%%%
 %%%%%%% used for open %%%%%%% 
 %%%%%% answer questions %%%%%
@@ -214,18 +202,6 @@
           ##2
         \end{choices}
       \end{questionmult}
-    }
-  }
-
-  \renewcommand{\single}[2]{
-    \element{#1}{
-      \stepcounter{poolQCounter}
-      \begin{question}{#1-Q\arabic{poolQCounter}}\scoring{\singleScore}
-        ##1
-        \begin{choices}
-          ##2
-        \end{choices}
-      \end{question}
     }
   }
 

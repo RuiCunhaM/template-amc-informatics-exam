@@ -36,7 +36,7 @@ This section provides an overview on how to use the most relevant Latex commands
 
 #### Building questions
 
-There are 5 main type of questions you can use. `truequestion`, `falsequestion`, `single`, `multiple` and `open`. To create and insert a question of one of these types you can utilize the commands in the example below. Make sure to provide the question with a unique identifier.
+There are 5 main type of questions you can use. `truequestion`, `falsequestion`, `multiple` and `open`. To create and insert a question of one of these types you can utilize the commands in the example below. Make sure to provide the question with a unique identifier.
 
 ```latex
 \truequestion{uid-1}{This is a true question}
@@ -48,13 +48,6 @@ There are 5 main type of questions you can use. `truequestion`, `falsequestion`,
   \correctchoice{This is another correct choice}
   \wrongchoice{This is a wrong choice}
   \wrongchoice{This is another wrong choice}
-}
-
-\single{uid-4}{This is a single answer question}{
-  \correctchoice{This is THE correct choice}
-  \wrongchoice{This is a wrong choice}
-  \wrongchoice{This is another wrong choice}
-  \wrongchoice{This is one more wrong choice}
 }
 
 \open{uid-5}{This is an open answer question}
@@ -87,13 +80,6 @@ When building question pools you need to utilize the `pool` environment as shown
     \correctchoice{This is another correct choice}
     \wrongchoice{This is a wrong choice}
     \wrongchoice{This is another wrong choice}
-  }
-
-  \single{This is a single answer question}{
-    \correctchoice{This is THE correct choice}
-    \wrongchoice{This is a wrong choice}
-    \wrongchoice{This is another wrong choice}
-    \wrongchoice{This is one more wrong choice}
   }
 
   \open{This is an open answer question}
@@ -161,7 +147,7 @@ We do not recommend using the internal AMC marking system to directly determine 
 
 The default scores are as followed:
 
-- **True or False** and **Single Option** questions are graded as `0` if the student did not answer, `1` if the student answered correctly and `-1` if the student answered the wrong option.
+- **True or False** questions are graded as `0` if the student did not answer, `1` if the student answered correctly and `-1` if the student answered the wrong option.
 
 - **Multiple Options** are graded between `0` and `1` in function of the number of correct options checked by the student. For example, if the question has 3 correct options, checking all 3 will result in a score of 1 (3 \* (1/3)), and checking just 2 will result in a score of ~0.66 (2 \* (1/3)). **A wrong selection invalidates a correct one**, therefore, following the same example, selecting 3 correct options and a wrong one, is the same as selecting just 2 correct ones.
 
