@@ -1,9 +1,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% Question scores %%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\truefalseScore{v=0,b=1,m=-1}
-\def\singleScore{e=0,v=0,b=1,m=0}
-\def\multipleScore{e=0,v=0,b=.25,m=-.25,p=0,d=0}
+\def\truefalseScore{
+  e=0, % incoherent response
+  v=0,  % no response
+  b=1,  % correct response
+  m=-1  % wrong response
+}
+
+\def\singleScore{
+  e=0, % incoherent response
+  v=0, % no response
+  b=1, % correct response
+  m=0  % wrong response
+}
+
+\def\multipleScore{
+  e=0,    % incoherent response
+  v=0,    % no response
+  p=0,    % bottom score
+  % If the number of wrong answers is equal to the total number of answers (NM == N) then the correct answer is "None of the above". In this case, the question is correct (1) if no wrong answer was checked (1 - NMC). 
+  % Otherwise, each correct option is valued at 1 dividing by the total number of correct options (1/NB). The final score is given by the number of correct options selected minus the number of incorrect options selected (NBC*(1/NB) - NMC*(1/NB))
+  formula= NM == N ? 1 - NMC : NBC*(1/NB) - NMC*(1/NB)
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%% Score box %%%%%%%%%
