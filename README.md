@@ -1,6 +1,6 @@
 # Auto Multiple Choice (AMC) exam template
 
-This repository contains an AMC exam template for the Informatics Department at University of Minho. The template provides sensible default options and less verbose commands when compared with the original AMC in an attempt to provide a smoother and easier experience.
+This repository contains an [_Auto Multiple Choice (AMC)_](https://www.auto-multiple-choice.net/) exam template for the Informatics Department at University of Minho. The LaTex template provides sensible default options and less verbose commands when compared with the original AMC in an attempt to provide a smoother and easier experience.
 
 > [!NOTE]
 > Small visual discrepancies may occur depending on the Latex compiler used. This template was developed and tested using `LuaTex v1.18.0`.
@@ -143,7 +143,7 @@ Consider this amazing code:\newline
 We do not recommend using the internal AMC marking system to directly determine the final students mark. Instead, default question scores are configured with the goal of exporting the data from ACM (i.e. in CSV) to later be processed in any other spreadsheet software. **This offers higher flexibility when grading exams.**
 
 > [!TIP]
-> If you wish to customize these values refer to AMC documentation and update the [config.tex](./config.tex) file accordingly.
+> If you wish to customize these values refer to [AMC's documentation](https://www.auto-multiple-choice.net/doc.en) and update the [config.tex](./config.tex) file accordingly.
 
 The default scores are as followed:
 
@@ -182,12 +182,13 @@ After this process, the `Flattened.pdf` can be loaded into AMC for the data capt
   % ...
   ```
 
-  This will insert one random question version from each pool as intended, however, in all the exams the `q1` question will appear first, followed by the `q2`. If you wish to shuffle the questions order, so in some exams `q2` will appear first followed by `q1`, you can use the `combinepool` command to create a new pool and later insert the new one:
+  This will insert one random question version from each pool as intended, however, in all the exams the `q1` question will appear first, followed by the `q2`. If you wish to shuffle the order of the questions, so in some exams `q2` will appear first followed by `q1`, you can use the `combinepool` command. Using this method, a new pool will be created picking a question at random from every single other pool. Finally, when inserting the new combined pool, the order of the questions will be randomized.
 
   ```latex
   \combinepool{combined-pool}
     {q1-pool}
     {q2-pool}
+    ...
 
   \insertpool{combinepool}
   ```
@@ -196,5 +197,5 @@ After this process, the `Flattened.pdf` can be loaded into AMC for the data capt
 
 ##### TODO:
 
-- [ ] Allow setting language used (remove hardcoded Portuguese sentences).
+- [ ] Allow setting the exam language (remove hardcoded Portuguese sentences).
 - [ ] Reduce the amount of duplicated code in the pool environment definition. Due to AMC inner works, Latex command expansion does not work entirely as expected, which makes it hard to reuse some previous command definitions.
