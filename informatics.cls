@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{informatics}
-  [2024/07/23 v1.0 - Maintainer: Rui Cunha Monteiro]
+  [2024/12/26 v1.0 - Maintainer: Rui Cunha Monteiro (rui.p.monteiro@inesctec.pt)]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%% Packages %%%%%%%%%%
