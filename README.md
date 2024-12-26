@@ -36,7 +36,7 @@ This section provides an overview on how to use the most relevant Latex commands
 
 #### Building questions
 
-There are 5 main type of questions you can use. `truequestion`, `falsequestion`, `multiple` and `open`. To create and insert a question of one of these types you can utilize the commands in the example below. Make sure to provide the question with a unique identifier.
+There are 4 main type of questions you can use. `truequestion`, `falsequestion`, `multiple` and `open`. To create and insert a question of one of these types you can utilize the commands in the example below. Make sure to provide the question with a unique identifier.
 
 ```latex
 \truequestion{uid-1}{This is a true question}
@@ -50,16 +50,16 @@ There are 5 main type of questions you can use. `truequestion`, `falsequestion`,
   \wrongchoice{This is another wrong choice}
 }
 
-\open{uid-5}{This is an open answer question}
+\open{uid-4}{This is an open answer question}
 
-\openLines{uid-6}{n lines}{This is an open answer question with n lines space for students to answer}
+\openLines{uid-5}{n lines}{This is an open answer question with n lines space for students to answer}
 
-\itemsopen{uid-7}{This is an open answer question with multiple items}{
+\itemsopen{uid-6}{This is an open answer question with multiple items}{
   \qitem{This is one item}
   \qitem{This is another item}
 }
 
-\itemsopenLines{uid-8}{n lines}{This is an open answer question with multiple items and n lines space for students to answer}{
+\itemsopenLines{uid-7}{n lines}{This is an open answer question with multiple items and n lines space for students to answer}{
   \qitem{This is one item}
   \qitem{This is another item}
 }
