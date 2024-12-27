@@ -12,6 +12,7 @@ This repository contains an [_Auto Multiple Choice (AMC)_](https://www.auto-mult
    1. [Building questions](#building-questions)
    2. [Building question pools](#building-question-pools)
    3. [Inserting question pools](#inserting-question-pools)
+   4. [Miscellaneous](#miscellaneous)
 3. [Code blocks](#code-blocks)
 4. [Marking](#marking)
 5. [Manually grading open answer questions](#manually-grading-open-answer-questions)
@@ -115,6 +116,16 @@ When you create question pools, you later need to insert all or some of those qu
   {existent-pool-1}
   {existent-pool-2}
   {existent-pool-3}
+```
+
+#### Miscellaneous
+
+Miscellaneous commands to help build exams.
+
+```latex
+% Marks the beginning of a new question group (visual effect only).
+% The parameter 'text' is used to convey some information about the question group, usually its score.
+\questiongroup{text}
 ```
 
 ---
