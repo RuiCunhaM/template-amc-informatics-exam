@@ -170,7 +170,7 @@ The default scores are as followed:
     - $(3 - 1) * (1/3)$
   - Etc...
 
-- **Open Answer** questions are required to be manually graded from 0-100% with 10% intervals, that is, 0 to 1 with 0.1 increments. E.g. 0, 0.1, 0.2, 0.3, 0.4,..., 1. Refer to [Manually grading questions](#manually-grading-questions) for more details.
+- **Open Answer** questions are required to be manually graded from 0-100% with 10% intervals, that is, 0 to 1 with 0.1 increments. E.g. 0, 0.1, 0.2, 0.3, 0.4,..., 1. Refer to [Manually grading open answer questions](#manually-grading-open-answer-questions) for more details.
 
 > [!CAUTION]
 > When exporting marks into a CSV, AMC uses `.` for decimal values. This can cause issues when loading values in some spreadsheet programs (e.g. Google Sheets). Make sure to proper format your cells to ensure they are interpreted as a numeric value!
