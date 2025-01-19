@@ -160,9 +160,17 @@ The default scores are as followed:
 
 - **True or False** questions are graded as `0` if the student did not answer, `1` if the student answered correctly and `-1` if the student answered the wrong option.
 
-- **Multiple Options** are graded between `0` and `1` in function of the number of correct options checked by the student. For example, if the question has 3 correct options, checking all 3 will result in a score of 1 (3 \* (1/3)), and checking just 2 will result in a score of ~0.66 (2 \* (1/3)). **A wrong selection invalidates a correct one**, therefore, following the same example, selecting 3 correct options and a wrong one, is the same as selecting just 2 correct ones.
+- **Multiple Options** are graded between `0` and `1` in function of the number of correct options checked by the student. **Each wrong selection invalidates a correct one**. Consider an example where a question has 3 correct options, independent of the total number of options available:
 
-- **Open Answer** questions are required to be manually graded from 0-100% with 10% intervals, that is, 0 to 1 with 0.1 increments. E.g. 0.1, 0.2, 0.3, 0.4, 0.5,..., 1. Refer to [Manually grading questions](#manually-grading-questions) for more details.
+  - Checking **only** the 3 correct options will result in a score of `1`.
+    - $3 * (1/3)$
+  - Checking **just** 2 of the correct options and nothing else, will result in a score of approximately `0.66`.
+    - $2 * (1/3)$
+  - Checking the 3 correct options and 1 wrong one, will result in a score of approximately `0.66`.
+    - $(3 - 1) * (1/3)$
+  - Etc...
+
+- **Open Answer** questions are required to be manually graded from 0-100% with 10% intervals, that is, 0 to 1 with 0.1 increments. E.g. 0, 0.1, 0.2, 0.3, 0.4,..., 1. Refer to [Manually grading questions](#manually-grading-questions) for more details.
 
 > [!CAUTION]
 > When exporting marks into a CSV, AMC uses `.` for decimal values. This can cause issues when loading values in some spreadsheet programs (e.g. Google Sheets). Make sure to proper format your cells to ensure they are interpreted as a numeric value!
@@ -201,7 +209,7 @@ After this process, the `Flattened.pdf` can be loaded into AMC for the data capt
     {q2-pool}
     ...
 
-  \insertpool{combinepool}
+  \insertpool{combined-pool}
   ```
 
 ---
