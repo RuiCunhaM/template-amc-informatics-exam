@@ -166,7 +166,7 @@ The default scores are as followed:
     - $3 * (1/3)$
   - Checking **just** 2 of the correct options and nothing else, will result in a score of approximately `0.66`.
     - $2 * (1/3)$
-  - Checking the 3 correct options and 1 wrong one, will result in a score of approximately `0.66`.
+  - Checking the 3 correct options **and** 1 wrong one, will result in a score of approximately `0.66`.
     - $(3 - 1) * (1/3)$
   - Etc...
 
