@@ -289,3 +289,9 @@
 \newcommand{\checknextarg}[1]{\@ifnextchar\bgroup{\gobblenextarg{#1}}{  }}
 \newcommand{\gobblenextarg}[2]{\copypool[1]{#2}{#1}\@ifnextchar\bgroup{\gobblenextarg{#1}}{  }}
 \makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Misc commands %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\groupintro}[1]{{\small\noindent\it #1}}

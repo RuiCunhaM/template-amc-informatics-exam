@@ -129,6 +129,9 @@ Miscellaneous commands to help build exams.
 % Marks the beginning of a new question group (visual effect only).
 % The parameter 'text' is used to convey some information about the question group, usually its score.
 \questiongroup{text}
+
+% Useful to add a small text describing a question group.
+\groupintro{text}
 ```
 
 Standard `latex` commands can also be useful.
