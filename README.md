@@ -118,6 +118,9 @@ When you create question pools, you later need to insert all or some of those qu
   {existent-pool-3}
 ```
 
+> [!IMPORTANT]
+> The `combinepool` command should **always** be used inside the `\begin{examcopy}` block!
+
 #### Miscellaneous
 
 Miscellaneous commands to help build exams.
@@ -126,6 +129,21 @@ Miscellaneous commands to help build exams.
 % Marks the beginning of a new question group (visual effect only).
 % The parameter 'text' is used to convey some information about the question group, usually its score.
 \questiongroup{text}
+```
+
+Standard `latex` commands can also be useful.
+
+```latex
+% Clear page
+\clearpage
+
+% New page
+\newpage
+
+% Spacing
+\smallskip
+\medskip
+...
 ```
 
 ---
