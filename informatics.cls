@@ -23,7 +23,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcounter{poolQCounter}
 \newcounter{groupCounter}
-\newcounter{QItemCounter}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%% Header %%%%%%%%%%%%
@@ -110,16 +109,6 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%% Question item %%%%%%%
-%%%%%%% used for open %%%%%%% 
-%%%%%% answer questions %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\qitem}{
-  \stepcounter{QItemCounter}
-  ~\\{\bf \alph{QItemCounter})}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Open answer question %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\open}[2]{
@@ -131,38 +120,11 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Open answer question %%%%
-%%%% with question items %%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\itemsopen}[3]{
-  \setcounter{QItemCounter}{0}
-  \begin{question}{#1}
-    #2
-    \AMCOpen{lineup=true}{\scorebox}
-    #3
-  \end{question}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Open answer question %%%%
 %%%% with answer lines %%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\openLines}[3]{
   \begin{question}{#1}
     #3
-    \AMCOpen{lines=#2,lineheight=.3cm}{\scorebox}
-  \end{question}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Open answer question %%%%
-%%%% with question items %%%%
-%%%%% and answer lines %%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\itemsopenLines}[4]{
-  \setcounter{QItemCounter}{0}
-  \begin{question}{#1}
-    #3
-    #4
     \AMCOpen{lines=#2,lineheight=.3cm}{\scorebox}
   \end{question}
 }
@@ -215,18 +177,6 @@
     }
   }
 
-  \renewcommand{\itemsopen}[2]{
-    \element{#1}{
-      \stepcounter{poolQCounter}
-      \setcounter{QItemCounter}{0}
-      \begin{question}{#1-Q\arabic{poolQCounter}}
-        ##1
-        \AMCOpen{lineup=true}{\scorebox}
-        ##2
-      \end{question}
-    }
-  }
-
   \renewcommand{\openLines}[2]{
     \element{#1}{
       \stepcounter{poolQCounter}
@@ -236,19 +186,6 @@
       \end{question}
     }
   }
-
-  \renewcommand{\itemsopenLines}[3]{
-    \element{#1}{
-      \stepcounter{poolQCounter}
-      \setcounter{QItemCounter}{0}
-      \begin{question}{#1-Q\arabic{poolQCounter}}
-        ##2
-        ##3
-        \AMCOpen{lines=##1,lineheight=.3cm}{\scorebox}
-      \end{question}
-    }
-  }
-
 } { }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%

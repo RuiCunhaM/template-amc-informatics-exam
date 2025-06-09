@@ -54,16 +54,6 @@ There are 4 main type of questions you can use. `truequestion`, `falsequestion`,
 \open{uid-4}{This is an open answer question}
 
 \openLines{uid-5}{n lines}{This is an open answer question with n lines space for students to answer}
-
-\itemsopen{uid-6}{This is an open answer question with multiple items}{
-  \qitem{This is one item}
-  \qitem{This is another item}
-}
-
-\itemsopenLines{uid-7}{n lines}{This is an open answer question with multiple items and n lines space for students to answer}{
-  \qitem{This is one item}
-  \qitem{This is another item}
-}
 ```
 
 #### Building question pools
@@ -86,16 +76,6 @@ When building question pools you need to utilize the `pool` environment as shown
   \open{This is an open answer question}
 
   \openLines{n lines}{This is an open answer question with n lines space for students to answer}
-
-  \itemsopen{This is an open answer question with multiple items}{
-    \qitem{This is one item}
-    \qitem{This is another item}
-  }
-
-  \itemsopenLines{n lines}{This is an open answer question with multiple items and n lines space for students to answer}{
-    \qitem{This is one item}
-    \qitem{This is another item}
-  }
 \end{pool}
 ```
 
